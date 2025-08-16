@@ -91,6 +91,29 @@ npm run dev
 
 ---
 
+
+## Areas of Interest to the Team
+
+### 1. Security Considerations
+- User credentials are securely stored using Django's built-in user model and password hashing.
+- JWT tokens are used for authentication, reducing risk of session hijacking.
+- Django provides built-in protection against XSS and CSRF (CSRF middleware is enabled by default).
+- No sensitive API keys are exposed in the frontend; FX rates use a public mock API.
+
+### 2. Mobile Responsiveness
+- The frontend uses responsive design with Bootstrap and Material UI.
+- All main pages (dashboard, forms, ads, rates, history) adapt to various screen sizes and are usable on mobile devices.
+
+### 3. UI/UX
+- Navigation is intuitive with clear dashboard sections and links.
+- Loading spinners, error messages, and feedback are shown for all major user actions (login, signup, API calls).
+- Accessibility: Good color contrast, labeled buttons, and keyboard navigation via standard HTML and MUI components.
+
+### 4. Input Validation
+- All forms validate required fields (name, email, password, amount, etc.).
+- Numeric ranges are enforced (minimum/maximum send amount, fee calculation).
+- Backend and frontend both prevent invalid or malicious inputs (Django model validation, frontend checks).
+
 ## How Requirements Are Met
 - All challenge requirements are implemented and justified above.
 - The app is ready for demo, review, and further extension.
